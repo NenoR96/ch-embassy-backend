@@ -18,15 +18,15 @@ const app = express();
 require('./config/passport')(passport);
 
 // Connect to MongoDB
-mongoose.connect(config.database, { useNewUrlParser: true });
-//ako je povezivanje uspelo
-mongoose.connection.on('connected', () => {
-  console.log('Connected to detabase: ' + config.database);
-});
-//ako je doslo do greske
-mongoose.connection.on('error', (err) => {
-  console.log('Error with connection to db: ' + err);
-});
+// mongoose.connect(config.database, { useNewUrlParser: true });
+// //ako je povezivanje uspelo
+// mongoose.connection.on('connected', () => {
+//   console.log('Connected to detabase: ' + config.database);
+// });
+// //ako je doslo do greske
+// mongoose.connection.on('error', (err) => {
+//   console.log('Error with connection to db: ' + err);
+// });
 // Express body parser
 app.use(bodyParser.json());
 
